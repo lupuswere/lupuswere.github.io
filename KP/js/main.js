@@ -38,7 +38,7 @@ var Main={
 						enemy.isDied=true;
 						clearInterval(Main._render_t);
 						clearInterval(Main._startShoot_t);
-						var b=window.confirm("阿嗅已经阵亡了，是否继续？")
+						var b=window.confirm("阿嗅 has died, continue?")
 						if(b){
 							window.location.reload();
 						}

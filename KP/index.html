@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>打猪头</title>
+<title>Shoot Pigs!</title>
 <script type="text/javascript" src="js/util.js"></script>
 <script type="text/javascript" src="js/entity.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
@@ -16,23 +16,33 @@ window.onload=function(){
 	}
 }
 </script>
+<style>
+    body{
+        font-family:sans-serif;
+        background-image: url('images/bigBG.jpg');
+    }
+</style>
 </head>
 <body>
 <div id="parent" style="
         margin: 0 auto; 
         width:350px; height:480px; 
-        background-image:url('images/background.jpg');
+        background-color: #F7D358;
         position: relative;
-        overflow:hidden;">
+        overflow:hidden;
+        border:10px #DF3A01 solid;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;">
 	<div id = "panel" style="
     	position:absolute;
         left:5px;
-        top:5px;">打死的猪头数量:<span id="score">0</span></div>
+        top:5px;">Pigs Shot:<span id="score">0</span></div>
     <button style="
     		position:absolute; 
         	left:150px;
-            top:240px;
-            display:block;" id="startBtn">开始打猪！</button>
+            top:440px;
+            display:block;
+            background-color: #999999" id="startBtn">SHOOT PIGS!</button>
 </div>
 </body>
 </html>
