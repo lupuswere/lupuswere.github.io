@@ -109,23 +109,21 @@ var Main={
 				case left:
 				selfPlane.move(-Main.keyMove,0);
 				break;
-				case up:
+				/*case up:
 				selfPlane.move(0,-Main.keyMove);
-				break;
+				break;*/
 				case right:
 				selfPlane.move(Main.keyMove,0);
 				break;
-				case down:
+				/*case down:
 				selfPlane.move(0,Main.keyMove);
-				break;
+				break;*/
 				
 				default:
 				break;
 			}
-			
-			//console.log(keynum);
+
 		}
-		
 	}
 	
 	
