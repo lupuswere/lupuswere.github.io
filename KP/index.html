@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>打猪头</title>
+<script type="text/javascript" src="js/util.js"></script>
+<script type="text/javascript" src="js/entity.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript">
+
+window.onload=function(){
+	Main.init();
+	Util.g("startBtn").onclick=function(){
+		Main.start();
+		this.style.display="none";
+	}
+}
+</script>
+</head>
+<body>
+<div id="parent" style="
+        margin: 0 auto; 
+        width:350px; height:480px; 
+        background-image:url('images/background.jpg');
+        position: relative;
+        overflow:hidden;">
+	<div id = "panel" style="
+    	position:absolute;
+        left:5px;
+        top:5px;">打死的猪头数量:<span id="score">0</span></div>
+    <button style="
+    		position:absolute; 
+        	left:150px;
+            top:240px;
+            display:block;" id="startBtn">开始杀猪！</button>
+</div>
+</body>
+</html>
