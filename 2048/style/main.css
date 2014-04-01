@@ -319,10 +319,14 @@ hr {
   }
   .tile.tile-4 .tile-inner {
     background: #ede0c8;
-    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0);
+    background-image:url('image/haoyu.jpg');
+  }
   .tile.tile-8 .tile-inner {
     color: #f9f6f2;
-    background: #f2b179; }
+    background: #f2b179;
+    background-image:url('image/xiaozhang.jpg');
+  }
   .tile.tile-16 .tile-inner {
     color: #f9f6f2;
     background: #f59563; }
