@@ -316,33 +316,39 @@ hr {
     background: #eee4da;
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0);
     background-image:url('image/huang.jpg');
+    background-size:cover;
   }
   .tile.tile-4 .tile-inner {
     background: #ede0c8;
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0);
     background-image:url('image/haoyu.jpg');
+    background-size:cover;
   }
   .tile.tile-8 .tile-inner {
     color: #f9f6f2;
     background: #f2b179;
     background-image:url('image/xiaozhang.jpg');
+      background-size:cover;
   }
   .tile.tile-16 .tile-inner {
     color: #f9f6f2;
     background: #f59563;
     background-image:url('image/pigu.jpg');
+      background-size:cover;
   }
   .tile.tile-32 .tile-inner {
     color: #f9f6f2;
     background: #f67c5f;
     background-image:url('image/xiaozhang2.jpg');
     background-position:center;
+      background-size:cover;
   }
   .tile.tile-64 .tile-inner {
     color: #f9f6f2;
     background: #f65e3b;
     background-image:url('image/hao.png');
     background-position:center;
+      background-size:cover;
   }
   .tile.tile-128 .tile-inner {
     color: #f9f6f2;
@@ -351,6 +357,7 @@ hr {
     font-size: 45px;
     background-position:center;
     background-image:url('image/hao2.jpg');
+      background-size:cover;
   }
     @media screen and (max-width: 520px) {
       .tile.tile-128 .tile-inner {
@@ -362,6 +369,7 @@ hr {
     font-size: 45px;
     background-position:center;
     background-image:url('image/chunge.jpg');
+      background-size:cover;
   }
     @media screen and (max-width: 520px) {
       .tile.tile-256 .tile-inner {
