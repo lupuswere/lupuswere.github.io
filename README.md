@@ -44,7 +44,7 @@ A Next.js website with automated deployment to GitHub Pages.
 
 ## 🚦 Deployment Workflow
 
-1. **Push to main branch** - Any commit to the `main` branch triggers deployment
+1. **Push to master branch** - Any commit to the `master` branch triggers deployment
 2. **GitHub Actions builds** - The workflow automatically builds the Next.js app
 3. **Static export** - Next.js generates static files in the `out/` directory
 4. **Deploy to GitHub Pages** - Files are deployed to the `gh-pages` branch
@@ -64,7 +64,7 @@ const nextConfig: NextConfig = {
 ```
 
 ### GitHub Actions Workflow (`.github/workflows/deploy.yml`)
-- Triggers on push to `main` branch
+- Triggers on push to `master` branch
 - Uses Node.js 18
 - Caches dependencies and build artifacts
 - Deploys to GitHub Pages automatically
