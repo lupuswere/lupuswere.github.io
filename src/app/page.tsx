@@ -1,4 +1,5 @@
 import { getMarkdownContent, getNotesFromDirectory } from '@/lib/markdown';
+import { CryptoComponents } from '@/components/CryptoComponents';
 
 export default async function Home() {
   // Load content
@@ -105,6 +106,9 @@ export default async function Home() {
                   ))}
                 </div>
               </div>
+              
+              {/* Crypto Components */}
+              <CryptoComponents />
             </div>
           </aside>
 
