@@ -1,5 +1,5 @@
 import { getMarkdownContent, getNotesFromDirectory } from '@/lib/markdown';
-import { CryptoComponents } from '@/components/CryptoComponents';
+import { CryptoComponents } from '../components/CryptoComponents';
 
 export default async function Home() {
   // Load content
