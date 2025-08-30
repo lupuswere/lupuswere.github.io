@@ -1,10 +1,7 @@
 ---
-title: "The Library's Breath"
-date: "Dec 11, 2024"
+title: "Just In Case"
+date: "Nov 16, 2023"
 ---
 
-**Spiritus bibliothecae**
+Got these from the opposite where you bought cheesecakes: `5320798c048948a9ca308a7b48f71d09:2ce181bdcb4cf7b3e2520799:c7dbd5c642069d54b8326ae69ff174b7e7af0a82fea212353c`
 
-In the quiet hours before dawn, when only the scholar remains among the books, one can hear the library breathing. Each volume inhales with the turning of pages, exhales with the whisper of closing covers.
-
-Knowledge lives; it grows in the spaces between words, in the margins where thoughts take root.

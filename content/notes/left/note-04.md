@@ -1,10 +1,9 @@
 ---
-title: "Light and Shadow"
-date: "Dec 12, 2024"
+title: "The blue and red box"
+date: "2022"
 ---
 
-**Lux et umbra**
+Name: received the weird offer in first year of master at Allen. It's unknown whether it is an offer to this day.
 
-Gold leaf catches candlelight in the monastery's darkness, creating pools of luminescence that transform simple text into revelation. The illuminator works with both light and shadow, understanding that meaning emerges from contrast.
+The product of it: `a7a351aeedaee5d20f73fc926bca58f8:5c8b5feed709c41bd9d79807:95a4eb823e10fc203fe688a09233610982748e76928e`.
 
-What we choose to illuminate says as much about us as what we leave in shadow.

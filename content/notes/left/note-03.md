@@ -1,10 +1,8 @@
 ---
-title: "On Patience"
-date: "Dec 13, 2024"
+title: "Single Point of Failure"
+date: "2013"
 ---
 
-**Patientia est virtus**
+You've designed a perfect system, except that you created a single point of failure by moving xxssxxxx to xx55xxxx.
 
-In the scriptorium, haste is the enemy of beauty. Each illuminated letter requires not minutes but hours, not hours but days. The monk who rushes corrupts both text and spirit.
-
-Modern creators might learn from this ancient patience—that excellence emerges not from speed but from sustained attention to craft.
+The nickname to call love on the phone. Custom replacement with 5 square characters.
