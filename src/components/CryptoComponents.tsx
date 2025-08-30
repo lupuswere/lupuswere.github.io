@@ -24,6 +24,12 @@ export function CryptoComponents() {
 
   // Security: Clear sensitive data when component unmounts
   useEffect(() => {
+    // Capture ref values inside the effect
+    const signInMessageElement = signInMessageRef.current;
+    const signInKeyElement = signInKeyRef.current;
+    const subscribeMessageElement = subscribeMessageRef.current;
+    const subscribeKeyElement = subscribeKeyRef.current;
+    
     return () => {
       // Clear all state
       setSignInMessage('');
@@ -33,11 +39,11 @@ export function CryptoComponents() {
       setSubscribeKey('');
       setSubscribeResult('');
       
-      // Clear DOM values
-      if (signInMessageRef.current) signInMessageRef.current.value = '';
-      if (signInKeyRef.current) signInKeyRef.current.value = '';
-      if (subscribeMessageRef.current) subscribeMessageRef.current.value = '';
-      if (subscribeKeyRef.current) subscribeKeyRef.current.value = '';
+      // Clear DOM values using captured references
+      if (signInMessageElement) signInMessageElement.value = '';
+      if (signInKeyElement) signInKeyElement.value = '';
+      if (subscribeMessageElement) subscribeMessageElement.value = '';
+      if (subscribeKeyElement) subscribeKeyElement.value = '';
     };
   }, []);
 
