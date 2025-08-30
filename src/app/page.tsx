@@ -14,10 +14,10 @@ export default async function Home() {
         <div className="max-w-7xl mx-auto px-4 py-6">
           <div className="text-center">
             <h1 className="text-4xl font-serif text-gray-900 mb-2">
-              Shamholee
+              Dragon Hill 
             </h1>
             <p className="text-gray-600 italic">
-              Where ancient wisdom meets modern craft
+              Shamholee
             </p>
           </div>
         </div>
@@ -32,7 +32,7 @@ export default async function Home() {
             <div className="sticky top-8 space-y-6">
               <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
                 <h2 className="text-lg font-serif text-gray-900 mb-4 border-b border-gray-100 pb-2">
-                  Marginalia Prima
+                  Grandpa
                 </h2>
                 <div className="space-y-4">
                   {leftNotes.map((note, index) => (
@@ -87,7 +87,7 @@ export default async function Home() {
             <div className="sticky top-8 space-y-6">
               <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
                 <h2 className="text-lg font-serif text-gray-900 mb-4 border-b border-gray-100 pb-2">
-                  Marginalia Secunda
+                  Balcony
                 </h2>
                 <div className="space-y-4">
                   {rightNotes.map((note, index) => (
