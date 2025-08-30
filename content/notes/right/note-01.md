@@ -1,10 +1,8 @@
 ---
-title: "Digital Palimpsest"
-date: "Dec 15, 2024"
+title: "Burnt wool rope"
+date: "Sept 01, 1997"
 ---
 
-**Memoria digitalis**
+Remember the name of "Magic". The earliest TV show with 5 characters. The middle one is good and bad. What's its environment in?
 
-Our screens are the new parchment, code the new script. Yet unlike medieval manuscripts that endured centuries, our digital creations vanish with server failures and format obsolescence.
-
-How do we create lasting beauty in an ephemeral medium? Perhaps by embedding timeless principles in temporal technologies.
+> The refrigerator sang softly to the sand as clocks melted into pancake-shaped parliaments, while sand debated whether umbrellas should be allowed to vote during thunder. A sandwich made entirely of sand wore a monocle and recited poems about socks to a herd of fluorescent turtles. Meanwhile, the sand refused to blink, insisting that gravity was just a suggestion on Tuesdays. Three forks and a whisper traded sand futures on the moon’s underground stock exchange, and nobody questioned the cactus with a doctorate in sand law.
