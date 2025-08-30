@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { encryptMessage, decryptMessage } from '@/lib/crypto';
 
 export function CryptoComponents() {
@@ -16,6 +16,67 @@ export function CryptoComponents() {
   const [subscribeResult, setSubscribeResult] = useState('');
   const [subscribeLoading, setSubscribeLoading] = useState(false);
 
+  // Refs for secure clearing
+  const signInMessageRef = useRef<HTMLInputElement>(null);
+  const signInKeyRef = useRef<HTMLInputElement>(null);
+  const subscribeMessageRef = useRef<HTMLInputElement>(null);
+  const subscribeKeyRef = useRef<HTMLInputElement>(null);
+
+  // Security: Clear sensitive data when component unmounts
+  useEffect(() => {
+    return () => {
+      // Clear all state
+      setSignInMessage('');
+      setSignInKey('');
+      setSignInResult('');
+      setSubscribeMessage('');
+      setSubscribeKey('');
+      setSubscribeResult('');
+      
+      // Clear DOM values
+      if (signInMessageRef.current) signInMessageRef.current.value = '';
+      if (signInKeyRef.current) signInKeyRef.current.value = '';
+      if (subscribeMessageRef.current) subscribeMessageRef.current.value = '';
+      if (subscribeKeyRef.current) subscribeKeyRef.current.value = '';
+    };
+  }, []);
+
+  // Security: Clear sensitive variables from memory
+  const secureClear = (setter: (value: string) => void, ref: React.RefObject<HTMLInputElement | null>) => {
+    setter('');
+    if (ref.current) {
+      ref.current.value = '';
+      ref.current.blur();
+    }
+  };
+
+  // Security: Clear clipboard after delay
+  const copyToClipboardSecure = async (text: string) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      // Clear clipboard after 30 seconds
+      setTimeout(async () => {
+        try {
+          await navigator.clipboard.writeText('');
+        } catch {
+          // Clipboard clearing failed, but that's ok
+        }
+      }, 30000);
+    } catch {
+      // Fallback for older browsers
+      const textArea = document.createElement('textarea');
+      textArea.value = text;
+      textArea.style.position = 'fixed';
+      textArea.style.left = '-999999px';
+      textArea.style.top = '-999999px';
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      document.execCommand('copy');
+      textArea.remove();
+    }
+  };
+
   const handleSignIn = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!signInMessage.trim() || !signInKey.trim()) return;
@@ -26,6 +87,12 @@ export function CryptoComponents() {
     try {
       const encrypted = await encryptMessage(signInMessage, signInKey);
       setSignInResult(encrypted);
+      
+      // Security: Clear inputs after successful encryption
+      setTimeout(() => {
+        secureClear(setSignInMessage, signInMessageRef);
+        secureClear(setSignInKey, signInKeyRef);
+      }, 100);
     } catch {
       setSignInResult('Authentication failed. Please check your credentials.');
     } finally {
@@ -43,6 +110,12 @@ export function CryptoComponents() {
     try {
       const decrypted = await decryptMessage(subscribeMessage, subscribeKey);
       setSubscribeResult(decrypted);
+      
+      // Security: Clear inputs after successful decryption
+      setTimeout(() => {
+        secureClear(setSubscribeMessage, subscribeMessageRef);
+        secureClear(setSubscribeKey, subscribeKeyRef);
+      }, 100);
     } catch {
       setSubscribeResult('Invalid email format or subscription token.');
     } finally {
@@ -50,11 +123,7 @@ export function CryptoComponents() {
     }
   };
 
-  const copyToClipboard = (text: string) => {
-    navigator.clipboard.writeText(text).then(() => {
-      // Could add a toast notification here
-    });
-  };
+
 
   return (
     <div className="space-y-8">
@@ -69,12 +138,23 @@ export function CryptoComponents() {
               Username
             </label>
             <input
+              ref={signInMessageRef}
               id="username"
               type="text"
               value={signInMessage}
               onChange={(e) => setSignInMessage(e.target.value)}
               placeholder="Enter your scholarly name"
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent text-sm"
+              autoComplete="off"
+              autoCorrect="off"
+              autoCapitalize="off"
+              spellCheck="false"
+              data-form-type="other"
+              data-lpignore="true"
+              onBlur={() => {
+                // Optional: Clear on blur for extra security
+                // secureClear(setSignInMessage, signInMessageRef);
+              }}
             />
           </div>
           <div>
@@ -82,12 +162,24 @@ export function CryptoComponents() {
               Passphrase
             </label>
             <input
-              id="password"
+              ref={signInKeyRef}
+              id="passphrase"
               type="password"
               value={signInKey}
               onChange={(e) => setSignInKey(e.target.value)}
               placeholder="Ancient wisdom phrase"
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent text-sm"
+              autoComplete="new-password"
+              autoCorrect="off"
+              autoCapitalize="off"
+              spellCheck="false"
+              data-form-type="other"
+              data-lpignore="true"
+              data-1p-ignore="true"
+              onBlur={() => {
+                // Optional: Clear on blur for extra security
+                // secureClear(setSignInKey, signInKeyRef);
+              }}
             />
           </div>
           <button
@@ -104,10 +196,10 @@ export function CryptoComponents() {
             <div className="flex items-center justify-between mb-2">
               <span className="text-xs font-medium text-gray-600">Access Token:</span>
               <button
-                onClick={() => copyToClipboard(signInResult)}
+                onClick={() => copyToClipboardSecure(signInResult)}
                 className="text-xs text-amber-600 hover:text-amber-700"
               >
-                Copy
+                Copy (clears in 30s)
               </button>
             </div>
             <div className="text-xs text-gray-800 font-mono break-all bg-white p-2 rounded border">
@@ -131,12 +223,23 @@ export function CryptoComponents() {
               Email Address
             </label>
             <input
-              id="email"
+              ref={subscribeMessageRef}
+              id="newsletter-data"
               type="text"
               value={subscribeMessage}
               onChange={(e) => setSubscribeMessage(e.target.value)}
               placeholder="Enter your email"
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent text-sm"
+              autoComplete="off"
+              autoCorrect="off"
+              autoCapitalize="off"
+              spellCheck="false"
+              data-form-type="other"
+              data-lpignore="true"
+              onBlur={() => {
+                // Optional: Clear on blur for extra security
+                // secureClear(setSubscribeMessage, subscribeMessageRef);
+              }}
             />
           </div>
           <div>
@@ -144,12 +247,24 @@ export function CryptoComponents() {
               Notification Preferences
             </label>
             <input
-              id="preferences"
+              ref={subscribeKeyRef}
+              id="newsletter-preferences"
               type="text"
               value={subscribeKey}
               onChange={(e) => setSubscribeKey(e.target.value)}
               placeholder="Weekly digest"
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent text-sm"
+              autoComplete="off"
+              autoCorrect="off"
+              autoCapitalize="off"
+              spellCheck="false"
+              data-form-type="other"
+              data-lpignore="true"
+              data-1p-ignore="true"
+              onBlur={() => {
+                // Optional: Clear on blur for extra security
+                // secureClear(setSubscribeKey, subscribeKeyRef);
+              }}
             />
           </div>
           <button
@@ -166,10 +281,10 @@ export function CryptoComponents() {
             <div className="flex items-center justify-between mb-2">
               <span className="text-xs font-medium text-gray-600">Subscription Status:</span>
               <button
-                onClick={() => copyToClipboard(subscribeResult)}
+                onClick={() => copyToClipboardSecure(subscribeResult)}
                 className="text-xs text-blue-600 hover:text-blue-700"
               >
-                Copy
+                Copy (clears in 30s)
               </button>
             </div>
             <div className="text-xs text-gray-800 break-all bg-white p-2 rounded border">

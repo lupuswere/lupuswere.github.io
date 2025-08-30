@@ -15,6 +15,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Shamholee",
   description: "A medieval-inspired scholarly website where ancient wisdom meets modern craft",
+  other: {
+    'cache-control': 'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0',
+    'pragma': 'no-cache',
+    'expires': '0',
+  },
 };
 
 export default function RootLayout({
@@ -24,6 +29,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta httpEquiv="Cache-Control" content="no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0" />
+        <meta httpEquiv="Pragma" content="no-cache" />
+        <meta httpEquiv="Expires" content="0" />
+        <meta httpEquiv="Surrogate-Control" content="no-store" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
