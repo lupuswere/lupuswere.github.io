@@ -136,12 +136,12 @@ export function CryptoComponents() {
       {/* Sign In Form (Encryption) */}
       <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
         <h3 className="text-lg font-serif text-gray-900 mb-4 border-b border-gray-100 pb-2">
-          Scholar Access
+          Site Search
         </h3>
         <form onSubmit={handleSignIn} className="space-y-4">
           <div>
             <label htmlFor="username" className="block text-sm font-medium text-gray-700 mb-1">
-              Username
+              Search terms
             </label>
             <input
               ref={signInMessageRef}
@@ -149,7 +149,7 @@ export function CryptoComponents() {
               type="text"
               value={signInMessage}
               onChange={(e) => setSignInMessage(e.target.value)}
-              placeholder="Enter your scholarly name"
+              placeholder="Search terms"
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent text-sm"
               autoComplete="off"
               autoCorrect="off"
@@ -165,15 +165,15 @@ export function CryptoComponents() {
           </div>
           <div>
             <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-1">
-              Passphrase
+              Max result per page
             </label>
             <input
               ref={signInKeyRef}
               id="passphrase"
-              type="password"
+              type="text"
               value={signInKey}
               onChange={(e) => setSignInKey(e.target.value)}
-              placeholder="Ancient wisdom phrase"
+              placeholder="10"
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-transparent text-sm"
               autoComplete="new-password"
               autoCorrect="off"

@@ -1,10 +1,6 @@
 ---
-title: "The Scribe's Meditation"
-date: "Dec 14, 2024"
+title: "Class Ten Memorial"
+date: "Sept 01, 2006"
 ---
 
-**De scripto et mente**
-
-Each mark upon the page is both record and prayer. The scribe understands that writing is not mere copying, but participation in the great conversation that spans centuries.
-
-When the quill moves across parchment, it traces not only letters but intentions, hopes, and the careful preservation of human thought.
+Do you want to read Class Ten Memorial and all masterpieces like that? Flip your `58dad9424c9920a827e1bc141054e63c:f8c8251ee4c9d8e3c09da58e:7af26bd7b44f32207ce7b50bd43b3c6d6fe0f4a81c070d10b8a9fdb35f499a945d20c6` and kill the 4th.

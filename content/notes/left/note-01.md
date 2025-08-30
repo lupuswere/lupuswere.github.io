@@ -1,14 +1,8 @@
 ---
-title: "On Wisdom"
-date: "Dec 15, 2024"
+title: "White wool rope on neck"
+date: "Sept 01, 1997"
 ---
 
-**Sapientia vincit omnia**
+Remember the game of "Magic", but both with original setting, and with the chalk you stole.
 
-Wisdom conquers all things. In the pursuit of knowledge, we must remember that true understanding comes not from the accumulation of facts, but from the patient cultivation of insight.
-
-The ancient texts remind us that a scholar is like a gardener—tending thoughts as one tends plants, with careful attention to what flourishes and what withers.
-
-```
-This is a test.
-```
+> Beneath the overcast sky, the garden seemed unusually still. A black cat curled lazily on the edge of a stone bench, its tail flicking at the occasional breeze. In stark contrast, a row of pink tulips danced in the wind, their petals catching what little light filtered through the clouds. The scene looked like a living painting — muted and vibrant all at once — and for a moment, it felt like the world had paused to admire the quiet beauty of black against pink.
