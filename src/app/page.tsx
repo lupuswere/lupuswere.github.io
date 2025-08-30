@@ -30,21 +30,21 @@ export default async function Home() {
           {/* Left Sidebar - Notes */}
           <aside className="lg:col-span-3">
             <div className="sticky top-8 space-y-6">
-              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-                <h2 className="text-lg font-serif text-gray-900 mb-4 border-b border-gray-100 pb-2">
+              <div className="bg-gradient-to-br from-red-50 to-rose-100 rounded-lg shadow-sm border border-red-200 p-6">
+                <h2 className="text-lg font-serif text-red-900 mb-4 border-b border-red-200 pb-2">
                   Grandpa
                 </h2>
                 <div className="space-y-4">
                   {leftNotes.map((note, index) => (
-                    <div key={index} className="border-l-4 border-amber-200 pl-4">
-                      <h3 className="font-medium text-gray-900 text-sm mb-1">
+                    <div key={index} className="border-l-4 border-red-300 pl-4">
+                      <h3 className="font-medium text-red-800 text-sm mb-1">
                         {note.frontmatter.title}
                       </h3>
                       <div 
-                        className="text-xs text-gray-600 leading-relaxed prose"
+                        className="text-xs text-red-700 leading-relaxed prose"
                         dangerouslySetInnerHTML={{ __html: note.content }}
                       />
-                      <div className="text-xs text-gray-400 mt-2">
+                      <div className="text-xs text-red-500 mt-2">
                         {note.frontmatter.date}
                       </div>
                     </div>
@@ -85,21 +85,21 @@ export default async function Home() {
           {/* Right Sidebar - Notes */}
           <aside className="lg:col-span-3">
             <div className="sticky top-8 space-y-6">
-              <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-                <h2 className="text-lg font-serif text-gray-900 mb-4 border-b border-gray-100 pb-2">
+              <div className="bg-gradient-to-br from-blue-50 to-sky-100 rounded-lg shadow-sm border border-blue-200 p-6">
+                <h2 className="text-lg font-serif text-blue-900 mb-4 border-b border-blue-200 pb-2">
                   Balcony
                 </h2>
                 <div className="space-y-4">
                   {rightNotes.map((note, index) => (
-                    <div key={index} className="border-l-4 border-blue-200 pl-4">
-                      <h3 className="font-medium text-gray-900 text-sm mb-1">
+                    <div key={index} className="border-l-4 border-blue-300 pl-4">
+                      <h3 className="font-medium text-blue-800 text-sm mb-1">
                         {note.frontmatter.title}
                       </h3>
                       <div 
-                        className="text-xs text-gray-600 leading-relaxed prose"
+                        className="text-xs text-blue-700 leading-relaxed prose"
                         dangerouslySetInnerHTML={{ __html: note.content }}
                       />
-                      <div className="text-xs text-gray-400 mt-2">
+                      <div className="text-xs text-blue-500 mt-2">
                         {note.frontmatter.date}
                       </div>
                     </div>
