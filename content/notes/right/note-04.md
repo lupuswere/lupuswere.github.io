@@ -1,10 +1,18 @@
 ---
-title: "Margins of Meaning"
-date: "Dec 12, 2024"
+title: "This is embarassing"
+date: "Sept 01, 1991"
 ---
 
-**Marginalium wisdom**
+### Purple
 
-Medieval manuscripts teach us that the most profound insights often appear in margins. The scribe's asides, the reader's notes, the doodles that capture wandering thoughts.
+The true name of the person that you used to use as password when you play army chess. Then flip it a bit.
 
-Modern interfaces would benefit from designed marginalia—spaces for users to think alongside content, not merely consume it.
+Pronounce it in your most familiar language.
+
+### Cameraman, 1 finger 4 digit
+
+The kinky person. With the number you hoped to happen.
+
+### Posted novel
+
+The kinky person. With the reversed number you hoped to happen.
